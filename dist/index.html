@@ -5,10 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/fontawesome-free-6.6.0-web/css/all.min.css">
   </head>
-  <body>
-    <div class="bg-red-950 container text-white">
-      <h1 class=>hello tailwind</h1>
+  <body class="">
+    <div class=" rounded-lg wrapper mt-20 mx-auto px-3 py-6  bg-gray-500 grid grid-cols-12">
+      <div class="col-span-12 md:col-span-8 bg-gray-50 p-2 md:rounded-l-lg rounded-t-md md:rounded-tr-none">
+        <div class="country-name-and-date flex justify-around items-center mb-10 relative">
+          <h1 class="country-name">Iran</h1>
+          <input class=" w-2/4 p-0.5 px-2" />
+          <i class="fa-solid fa-magnifying-glass fa-flip-horizontal absolute md:right-[13.5rem] right-[8.5rem] top-1.5" style="color: #777c83;"></i>
+          <span class="Date text-[12px]">Tuesday 10 jan 2024</span>
+        </div>
+        
+        <div class="tempture relative">
+          <h2 class="temp text-center md:text-9xl text-6xl text-gray-500">20°</h2>
+          <i class="wind-speed fa-solid fa-wind absolute md:right-[12rem] right-[9rem] top-[5.5rem] text-sm" style="color: #989da4;"><span class="ml-1 text-[11px] md:text-[14px]">6.1mph</span></i>
+          <span class="wheather text-center block md:text-4xl text-gray-500">Cloudy</span>
+        </div>
+        <div class="card-container mx-auto  mt-10 flex flex-wrap justify-center">
+          <div class="card  w-1/3 md:w-1/6 p-4 text-center flex flex-col items-center cursor-pointer">
+            <div class="card-holder p-4 md:border-none border border-gray rounded-lg">
+              <p class="text-gray-900 text-[15px]">Today</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-400 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 md:w-1/6 p-4 text-center flex flex-col items-center ">
+            <div class="card-holder p-4 md:border-none border border-gray rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">Tue</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-400 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 md:w-1/6 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 md:border-none border border-gray rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">Wed</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-400 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 md:w-1/6 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 md:border-none border border-gray rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">Thu</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-400 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 md:w-1/6 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 md:border-none border border-gray rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">Fri</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-400 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 md:w-1/6 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 md:border-none border border-gray rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">Sat</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-400 text-[15px]">Mist</p>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+      <div class="col-span-12 md:col-span-4 bg-gray-300 rounded-b-lg md:rounded-r-lg md:rounded-b-none md:rounded-br-lg ">
+        <h2 class="greeting text-center p-2 md:text-2xl text-[25px] mt-8 md:mt-2">Good Morning</h2>
+        <span class="currTime text-center block mb-7">12:30 Pm</span>
+        <div class="tempture2 mb-4">
+          <h1 class="temp text-center text-gray-900 text-[35px]">20°</h1>
+          <span class="wheather text-center block  text-gray-900 text-[20px]">Cloudy</span>
+        </div>
+        <p class="text-center mt-8 text-[25px]">Hourly Weather</p>
+        <div class="card-container mx-auto  mt-2 flex flex-wrap justify-center">
+          <div class="card  w-1/3 p-4 text-center flex flex-col items-center cursor-pointer">
+            <div class="card-holder p-4 border border-gray-400 rounded-lg">
+              <p class="text-gray-900 text-[15px]">1PM</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-600 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 p-4 text-center flex flex-col items-center ">
+            <div class="card-holder p-4 border border-gray-400 rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">2PM</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-600 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 border border-gray-400 rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">3PM</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-600 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 border border-gray-400 rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">4PM</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-600 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 border border-gray-400 rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">5Pm</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-600 text-[15px]">Mist</p>
+            </div>
+          </div>
+          <div class="card w-1/3 p-4 text-center flex flex-col items-center">
+            <div class="card-holder p-4 border border-gray-400 rounded-lg cursor-pointer">
+              <p class="text-gray-900 text-[15px]">6PM</p>
+            <span class="text-[22px]">20°</span>
+            <p class="text-gray-600 text-[15px]">Mist</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
