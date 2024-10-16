@@ -14,3 +14,17 @@ body{
 .card-container{
     max-width: 80%;
 }
+.main{
+    background-image: url(Img/photo-1548347646-ae88c0d76ac4.jfif);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-image: url('Img/photo-1548347646-ae88c0d76ac4.jfif');
+    background-size: cover;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 0%; }
+  }
+  

@@ -8,6 +8,7 @@ let greetElem = document.querySelector(".greeting");
 let windElem = document.querySelector(".wind-speed");
 let cardsTemp = document.querySelectorAll(".daily-temp");
 let dailyCondition = document.querySelectorAll(".daily-condition");
+let hourlyCondition = document.querySelectorAll(".hourly-condition-card");
 console.log(cardsTemp);
 
 
@@ -71,12 +72,41 @@ function showForcastData(data) {
   
   filteredData.forEach((item, i) => {
       if (i < dailyCondition.length) {
-          console.log(item);
+        //   console.log(item);
           
           dailyCondition[i].textContent = `${item.weather[0].main}°`;
         }
     });
-    console.log(filteredData);
+     filteredData = data.list.slice(0 , 6);
+     console.log(filteredData);
+     
+     hourlyCondition.forEach((item , i) => {
+         
+         if (i < filteredData.length) {
+             const pTags = item.querySelectorAll("p");
+             const date = new Date(filteredData[i].dt * 1000); // تبدیل dt به تاریخ
+             const hours = date.getUTCHours(); // دریافت ساعت
+             const ampm = hours >= 12 ? "Pm" : "Am";
+             const displayHours = hours % 12 || 12;
+            
+            if (pTags.length > 0) {
+              pTags[0].textContent = `${displayHours} ${ampm}`; // نمایش ساعت در اولین تگ p
+            }
+            
+            // اگر دومین تگ p نیاز دارید
+            if (pTags.length > 1) {
+              pTags[1].textContent = `${filteredData[i].weather[0].main}`; // وضعیت آب و هوا
+            }
+      
+            const spanTag = item.querySelector("span");
+            if (spanTag) {
+                spanTag.innerHTML = `${Math.floor(filteredData[i].main.temp - 273)}°` // یا هر محتوای دلخواه دیگر
+            }
+          }
+    })
+    
+    
+    // console.log(filteredData);
 }
 
 function showData(data) {
@@ -166,4 +196,4 @@ function formatTime() {
 }
 
 // فراخوانی تابع
-console.log(formatTime()); // مثلا: 12:30pm
+// console.log(formatTime()); // مثلا: 12:30pm
